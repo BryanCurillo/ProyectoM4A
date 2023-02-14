@@ -25,7 +25,10 @@ public class PieFactura implements Serializable{
 	private Double pie_subTotal;
 	private Double pie_total;
 	private Double pie_precioEnvio;
-	
+	private Long pie_idEncabezado;
+	/**
+	 * 
+	 */
 	public Long getPie_id() {
 		return pie_id;
 	}
@@ -50,4 +53,11 @@ public class PieFactura implements Serializable{
 	public void setPie_precioEnvio(Double pie_precioEnvio) {
 		this.pie_precioEnvio = pie_precioEnvio;
 	}
+	public Long getPie_idEncabezado() {
+		return pie_idEncabezado;
+	}
+	public void setPie_idEncabezado(Long pie_idEncabezado) {
+		this.pie_idEncabezado = pie_idEncabezado;
+	}
+	
 }

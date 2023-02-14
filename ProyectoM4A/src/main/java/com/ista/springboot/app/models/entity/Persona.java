@@ -30,16 +30,28 @@ public class Persona implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "per_id")
 	private Long per_id;
 	/**
 	 * 
 	 */
-	@Column(unique = true)
+	@Column(unique = true,name = "per_cedula")
 	private String per_cedula;
 	/**
 	 * 
 	 */
-	private String per_apellido, per_correo, per_direccion, per_telefono, per_sexo;
+	@Column(name = "per_nombre")
+	private String per_nombre;
+	@Column(name = "per_apellido")
+	private String per_apellido;
+	@Column(name = "per_correo")
+	private String per_correo;
+	@Column(name = "per_direccion")
+	private String per_direccion;
+	@Column(name = "per_telefono")
+	private String per_telefono;
+	@Column(name = "per_sexo")
+	private String per_sexo;
 	/**
 	 * 
 	 */
@@ -54,6 +66,12 @@ public class Persona implements Serializable {
 	}
 	public void setPer_cedula(String per_cedula) {
 		this.per_cedula = per_cedula;
+	}
+	public String getPer_nombre() {
+		return per_nombre;
+	}
+	public void setPer_nombre(String per_nombre) {
+		this.per_nombre = per_nombre;
 	}
 	public String getPer_apellido() {
 		return per_apellido;
@@ -84,8 +102,7 @@ public class Persona implements Serializable {
 	}
 	public void setPer_sexo(String per_sexo) {
 		this.per_sexo = per_sexo;
-	}
-	
+	}	
 	
 
 }
